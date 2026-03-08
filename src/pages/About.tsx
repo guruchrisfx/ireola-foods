@@ -8,7 +8,7 @@ const About = () => (
         <img src={logo} alt="Ireola Foods" className="h-24 w-24 rounded-full mx-auto mb-6 object-cover border-4 border-primary-foreground/20" />
         <h1 className="font-display text-3xl md:text-5xl font-bold mb-4">About Ireola Foods</h1>
         <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
-          Lagos' No. 1 measured cereals vendor — trusted by families, students, and businesses across Nigeria.
+          Lagos' No. 1 measured cereals vendor — trusted by 10,400+ followers and families across Nigeria.
         </p>
       </div>
     </section>
