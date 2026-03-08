@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Truck, Star, ChevronRight, Package, CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import ProductCard from "@/components/ProductCard";
 import { products, getWhatsAppLink } from "@/lib/products";
@@ -106,6 +107,36 @@ const Index = () => {
             {featured.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Combo Deal */}
+      <section className="bg-gradient-to-br from-primary to-primary/90 text-primary-foreground py-10 md:py-16">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div className="flex -space-x-4 flex-shrink-0">
+              {[products[0], products[1], products[7]].map((p, i) => (
+                <img
+                  key={i}
+                  src={p.image}
+                  alt={p.name}
+                  className="h-20 w-20 md:h-28 md:w-28 rounded-full border-4 border-primary object-cover shadow-lg"
+                />
+              ))}
+            </div>
+            <div className="text-center md:text-left flex-1">
+              <Badge className="bg-secondary text-secondary-foreground mb-2 text-xs">🔥 Best Seller</Badge>
+              <h2 className="font-display text-xl md:text-3xl font-bold mb-2">Combo Deal — ₦28,000</h2>
+              <p className="text-primary-foreground/80 text-sm md:text-base mb-4 leading-relaxed">
+                Golden Morn + Cornflakes + Full Cream Milk — all in full bag measurements. Save more when you buy the bundle!
+              </p>
+              <Button size="lg" className="w-full sm:w-auto bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-sm" asChild>
+                <a href={getWhatsAppLink("combo")} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="h-4 w-4 mr-2" /> Order Combo on WhatsApp
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
