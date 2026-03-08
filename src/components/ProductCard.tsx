@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { ShoppingCart, MessageCircle } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import type { Product } from "@/lib/products";
 import { getWhatsAppLink } from "@/lib/products";
 
@@ -37,7 +38,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           </Button>
           <Button size="sm" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-xs" asChild>
             <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-3.5 w-3.5 mr-1" /> Order
+              <WhatsAppIcon className="h-3.5 w-3.5 mr-1" /> Order
             </a>
           </Button>
         </div>

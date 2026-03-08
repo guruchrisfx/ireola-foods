@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logo from "@/assets/ireola-logo.png";
 import { getWhatsAppLink } from "@/lib/products";
 
@@ -44,7 +44,7 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <Button size="sm" className="hidden md:inline-flex bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
             <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-4 w-4 mr-1" /> Order Now
+              <WhatsAppIcon className="h-4 w-4 mr-1" /> Order Now
             </a>
           </Button>
           <button className="md:hidden p-2" onClick={() => setOpen(!open)}>
@@ -67,7 +67,7 @@ const Header = () => {
           ))}
           <Button className="w-full mt-3 bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
             <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-4 w-4 mr-2" /> Order on WhatsApp
+              <WhatsAppIcon className="h-4 w-4 mr-2" /> Order on WhatsApp
             </a>
           </Button>
         </nav>
