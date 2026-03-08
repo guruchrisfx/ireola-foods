@@ -173,15 +173,6 @@ export const categories = [
   { id: "foodstuff", name: "Foodstuffs & Snacks", count: products.filter(p => p.category === "foodstuff").length },
 ];
 
-export function getWhatsAppLink(productName?: string, measurement?: string) {
-  const phone = "2349162797173";
-  let message = "Hello Ireola Foods! ";
-  if (productName && measurement) {
-    message += `I'd like to order ${productName} (${measurement}). Please send me the details.`;
-  } else if (productName) {
-    message += `I'm interested in ${productName}. Please send me the details.`;
-  } else {
-    message += "I'd like to place an order. Please assist me.";
-  }
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+export function getWhatsAppLink() {
+  return "https://wa.me/message/PE6HU5UK4RRAB1";
 }
