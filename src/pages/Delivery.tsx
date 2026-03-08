@@ -18,17 +18,13 @@ const Delivery = () => (
     <section className="container py-12 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {[
-          { icon: MapPin, title: "Nationwide Coverage", desc: "We deliver within Lagos and across Nigeria. Wherever you are, we'll get your order to you." },
-          { icon: Clock, title: "Fast Lagos Delivery", desc: "Orders within Lagos are processed quickly. Most deliveries within Ojodu Berger and surrounding areas arrive same-day or next-day." },
-          { icon: Package, title: "Secure Packaging", desc: "Every order is carefully packaged to ensure your cereals and products arrive fresh and intact." },
-          { icon: () => <WhatsAppIcon className="h-8 w-8 text-primary" />, title: "WhatsApp Confirmation", desc: "After placing your order, you'll receive a WhatsApp confirmation with delivery tracking details." },
+          { icon: <MapPin className="h-8 w-8 text-primary flex-shrink-0" />, title: "Nationwide Coverage", desc: "We deliver within Lagos and across Nigeria. Wherever you are, we'll get your order to you." },
+          { icon: <Clock className="h-8 w-8 text-primary flex-shrink-0" />, title: "Fast Lagos Delivery", desc: "Orders within Lagos are processed quickly. Most deliveries within Ojodu Berger and surrounding areas arrive same-day or next-day." },
+          { icon: <Package className="h-8 w-8 text-primary flex-shrink-0" />, title: "Secure Packaging", desc: "Every order is carefully packaged to ensure your cereals and products arrive fresh and intact." },
+          { icon: <WhatsAppIcon className="h-8 w-8 text-primary flex-shrink-0" />, title: "WhatsApp Confirmation", desc: "After placing your order, you'll receive a WhatsApp confirmation with delivery tracking details." },
         ].map((item, i) => (
           <div key={i} className="flex gap-4 p-6 bg-card border rounded-lg">
-            {typeof item.icon === "function" ? (
-              <div className="flex-shrink-0"><item.icon /></div>
-            ) : (
-              <item.icon className="h-8 w-8 text-primary flex-shrink-0" />
-            )}
+            {item.icon}
             <div>
               <h3 className="font-bold mb-1">{item.title}</h3>
               <p className="text-sm text-muted-foreground">{item.desc}</p>
