@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import FirstVisitPopup from "@/components/FirstVisitPopup";
 import Index from "./pages/Index";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
@@ -36,6 +37,7 @@ const App = () => (
         </main>
         <Footer />
         <WhatsAppFloat />
+        <FirstVisitPopup />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
