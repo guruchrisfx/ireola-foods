@@ -7,7 +7,7 @@ const Footer = () => (
       <div>
         <h3 className="font-display text-xl font-bold mb-3">Ireola Foods</h3>
         <p className="text-primary-foreground/70 text-sm leading-relaxed">
-          Lagos' No. 1 measured cereals vendor. Quality products sourced directly from manufacturer bags.
+          Lagos' No. 1 measured cereals vendor. Quality products sourced directly from manufacturer bags at affordable prices.
         </p>
       </div>
       <div>
@@ -25,8 +25,8 @@ const Footer = () => (
           <span className="flex items-center gap-2"><Phone className="h-4 w-4" /> 07037495760</span>
           <span className="flex items-center gap-2"><Phone className="h-4 w-4" /> 09162797173</span>
           <span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Ojodu Berger, Lagos</span>
-          <a href="https://instagram.com/ireola_foods_cereals_vendor" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
-            <Instagram className="h-4 w-4" /> @ireola_foods_cereals_vendor
+          <a href="https://instagram.com/ireolafoodscerealsvendor" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
+            <Instagram className="h-4 w-4" /> @ireolafoodscerealsvendor
           </a>
         </div>
       </div>

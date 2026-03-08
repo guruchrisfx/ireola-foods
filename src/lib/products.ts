@@ -1,3 +1,16 @@
+import goldenMorn from "@/assets/products/golden-morn.jpg";
+import cornflakes from "@/assets/products/cornflakes.jpg";
+import cocoPops from "@/assets/products/coco-pops.jpg";
+import frosties from "@/assets/products/frosties.jpg";
+import oats from "@/assets/products/oats.jpg";
+import fruitsFibres from "@/assets/products/fruits-fibres.jpg";
+import miloCrunchy from "@/assets/products/milo-crunchy.jpg";
+import fullCreamMilk from "@/assets/products/full-cream-milk.jpg";
+import importedMilk from "@/assets/products/imported-milk.jpg";
+import milo from "@/assets/products/milo.jpg";
+import custard from "@/assets/products/custard.jpg";
+import kuliKuli from "@/assets/products/kuli-kuli.jpg";
+
 export interface Product {
   id: string;
   name: string;
@@ -13,7 +26,7 @@ export const products: Product[] = [
     name: "Golden Morn",
     category: "cereals",
     description: "Premium Golden Morn cereal measured from original manufacturer bags to ensure authentic quality and freshness.",
-    image: "",
+    image: goldenMorn,
     measurements: [
       { label: "Paint Bucket", price: "₦3,500" },
       { label: "Half Bag", price: "₦8,500" },
@@ -25,7 +38,7 @@ export const products: Product[] = [
     name: "Cornflakes",
     category: "cereals",
     description: "Crispy cornflakes sourced directly from original company bags. Perfect for a quick and nutritious breakfast.",
-    image: "",
+    image: cornflakes,
     measurements: [
       { label: "Paint Bucket", price: "₦2,800" },
       { label: "Half Bag", price: "₦7,000" },
@@ -37,7 +50,7 @@ export const products: Product[] = [
     name: "Kellogg's Coco Pops",
     category: "cereals",
     description: "Delicious chocolate-flavoured rice cereal that turns your milk into a chocolatey treat.",
-    image: "",
+    image: cocoPops,
     measurements: [
       { label: "Paint Bucket", price: "₦4,000" },
       { label: "Half Bag", price: "₦10,000" },
@@ -49,7 +62,7 @@ export const products: Product[] = [
     name: "Frosties",
     category: "cereals",
     description: "Sugar-frosted corn flakes for a sweet and crunchy breakfast experience.",
-    image: "",
+    image: frosties,
     measurements: [
       { label: "Paint Bucket", price: "₦3,800" },
       { label: "Half Bag", price: "₦9,500" },
@@ -61,7 +74,7 @@ export const products: Product[] = [
     name: "Oats",
     category: "cereals",
     description: "Wholesome oats perfect for a healthy, filling breakfast. Measured fresh from original bags.",
-    image: "",
+    image: oats,
     measurements: [
       { label: "Paint Bucket", price: "₦2,500" },
       { label: "Half Bag", price: "₦6,500" },
@@ -73,7 +86,7 @@ export const products: Product[] = [
     name: "Fruits & Fibres",
     category: "cereals",
     description: "A nutritious blend of wheat flakes with real dried fruits for a balanced breakfast.",
-    image: "",
+    image: fruitsFibres,
     measurements: [
       { label: "Paint Bucket", price: "₦4,200" },
       { label: "Half Bag", price: "₦10,500" },
@@ -85,7 +98,7 @@ export const products: Product[] = [
     name: "Milo Crunchy",
     category: "cereals",
     description: "Crunchy chocolate cereal bites with the iconic Milo taste. A family favourite.",
-    image: "",
+    image: miloCrunchy,
     measurements: [
       { label: "Paint Bucket", price: "₦4,500" },
       { label: "Half Bag", price: "₦11,000" },
@@ -97,7 +110,7 @@ export const products: Product[] = [
     name: "Full Cream Milk",
     category: "milk-beverages",
     description: "Rich and creamy full cream milk powder. Perfect with cereals or as a standalone drink.",
-    image: "",
+    image: fullCreamMilk,
     measurements: [
       { label: "Paint Bucket", price: "₦5,000" },
       { label: "Half Bag", price: "₦12,000" },
@@ -109,7 +122,7 @@ export const products: Product[] = [
     name: "Imported Milk",
     category: "milk-beverages",
     description: "Premium imported milk powder with superior taste and quality.",
-    image: "",
+    image: importedMilk,
     measurements: [
       { label: "Paint Bucket", price: "₦6,500" },
       { label: "Half Bag", price: "₦15,000" },
@@ -121,7 +134,7 @@ export const products: Product[] = [
     name: "Milo",
     category: "milk-beverages",
     description: "Nigeria's favourite chocolate malt drink. Energy-packed and delicious.",
-    image: "",
+    image: milo,
     measurements: [
       { label: "Paint Bucket", price: "₦4,800" },
       { label: "Half Bag", price: "₦11,500" },
@@ -133,7 +146,7 @@ export const products: Product[] = [
     name: "Custard",
     category: "milk-beverages",
     description: "Smooth and creamy custard powder for a warm, comforting meal.",
-    image: "",
+    image: custard,
     measurements: [
       { label: "Paint Bucket", price: "₦3,200" },
       { label: "Half Bag", price: "₦8,000" },
@@ -145,7 +158,7 @@ export const products: Product[] = [
     name: "Kuli-Kuli",
     category: "foodstuff",
     description: "Traditional Nigerian groundnut snack. Crunchy, tasty, and packed with protein.",
-    image: "",
+    image: kuliKuli,
     measurements: [
       { label: "Paint Bucket", price: "₦2,000" },
       { label: "Half Bag", price: "₦5,000" },
@@ -161,7 +174,7 @@ export const categories = [
 ];
 
 export function getWhatsAppLink(productName?: string, measurement?: string) {
-  const phone = "2347037495760";
+  const phone = "2349162797173";
   let message = "Hello Ireola Foods! ";
   if (productName && measurement) {
     message += `I'd like to order ${productName} (${measurement}). Please send me the details.`;

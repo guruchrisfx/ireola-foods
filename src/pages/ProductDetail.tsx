@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, ArrowLeft, ShieldCheck, Truck } from "lucide-react";
 import { products, getWhatsAppLink } from "@/lib/products";
-import categoryCereals from "@/assets/category-cereals.jpg";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -30,7 +29,7 @@ const ProductDetail = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-          <img src={categoryCereals} alt={product.name} className="w-full h-full object-cover" />
+          <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
         </div>
 
         <div>
