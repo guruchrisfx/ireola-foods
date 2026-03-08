@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Truck, Star, ChevronRight, Package, CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import ProductCard from "@/components/ProductCard";
 import { products, getWhatsAppLink } from "@/lib/products";
