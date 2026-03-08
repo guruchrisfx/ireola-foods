@@ -69,7 +69,7 @@ const Index = () => {
           <span className="flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 md:h-4 md:w-4" /> Original Quality</span>
           <span className="flex items-center gap-1.5"><Package className="h-3.5 w-3.5 md:h-4 md:w-4" /> Measured Quantities</span>
           <span className="flex items-center gap-1.5"><Truck className="h-3.5 w-3.5 md:h-4 md:w-4" /> Nationwide Delivery</span>
-          <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 md:h-4 md:w-4" /> 10.4K+ Followers</span>
+          <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 md:h-4 md:w-4" /> 10K+ Followers</span>
         </div>
       </section>
 
@@ -202,7 +202,7 @@ const Index = () => {
       <section className="bg-cream py-10 md:py-12 text-center">
         <div className="container px-4">
           <h2 className="font-display text-xl md:text-3xl font-bold mb-2 md:mb-3">Follow Us on Instagram</h2>
-          <p className="text-muted-foreground text-xs md:text-base mb-1.5 md:mb-2">6,000+ posts • 10.4K followers</p>
+          <p className="text-muted-foreground text-xs md:text-base mb-1.5 md:mb-2">6,000+ posts • 10K+ followers</p>
           <p className="text-muted-foreground text-xs md:text-base mb-4 md:mb-6">See our latest products, prices and customer reviews</p>
           <Button size="default" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground text-sm" asChild>
             <a href="https://instagram.com/ireolafoodscerealsvendor" target="_blank" rel="noopener noreferrer">
