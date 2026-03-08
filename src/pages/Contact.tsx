@@ -71,6 +71,21 @@ const Contact = () => {
                 <WhatsAppIcon className="h-4 w-4 mr-2" /> Chat on WhatsApp
               </a>
             </Button>
+
+            {/* Google Map */}
+            <div className="rounded-lg overflow-hidden border mt-2">
+              <iframe
+                title="Ireola Foods Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.8!2d3.3456!3d6.6631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9b1e1c1c1c1%3A0x1c1c1c1c1c1c1c1c!2sOjodu%20Berger%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000"
+                width="100%"
+                height="220"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+              />
+            </div>
           </div>
 
           {/* Contact Form */}
