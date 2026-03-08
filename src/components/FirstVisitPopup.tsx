@@ -29,11 +29,11 @@ const FirstVisitPopup = () => {
     localStorage.setItem(STORAGE_KEY, "1");
     if (phone.trim()) {
       const msg = encodeURIComponent(
-        `Hi! I'd like to know more about the Ireola Foods combo deal. My number: ${phone.trim()}`
+        `Hi Ireola Foods! 🎉 I'd like to claim the Best-Seller Combo Deal — Golden Morn + Cornflakes + Milk starting at ₦28,000. My number: ${phone.trim()}. Please send your account details so I can make payment!`
       );
       window.open(`https://wa.me/2349162797173?text=${msg}`, "_blank");
     } else {
-      window.open(getWhatsAppLink(), "_blank");
+      window.open(getWhatsAppLink("combo"), "_blank");
     }
     setOpen(false);
   };

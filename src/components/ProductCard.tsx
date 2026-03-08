@@ -37,7 +37,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             </Link>
           </Button>
           <Button size="sm" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground text-xs" asChild>
-            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+            <a href={getWhatsAppLink({ product })} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-3.5 w-3.5 mr-1" /> Order
             </a>
           </Button>

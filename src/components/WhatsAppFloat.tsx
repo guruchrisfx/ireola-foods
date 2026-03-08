@@ -3,7 +3,7 @@ import { getWhatsAppLink } from "@/lib/products";
 
 const WhatsAppFloat = () => (
   <a
-    href={getWhatsAppLink()}
+    href={getWhatsAppLink("enquiry")}
     target="_blank"
     rel="noopener noreferrer"
     className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-whatsapp text-whatsapp-foreground px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
