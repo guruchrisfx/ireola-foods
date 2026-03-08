@@ -43,7 +43,7 @@ const Header = () => {
 
         <div className="flex items-center gap-2">
           <Button size="sm" className="hidden md:inline-flex bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
-            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+            <a href={getWhatsAppLink("general")} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-4 w-4 mr-1" /> Order Now
             </a>
           </Button>
@@ -66,7 +66,7 @@ const Header = () => {
             </Link>
           ))}
           <Button className="w-full mt-3 bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
-            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+            <a href={getWhatsAppLink("general")} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-4 w-4 mr-2" /> Order on WhatsApp
             </a>
           </Button>

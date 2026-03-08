@@ -54,7 +54,7 @@ const Index = () => {
               <Link to="/shop">Shop Products</Link>
             </Button>
             <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
-              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+              <a href={getWhatsAppLink("general")} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="h-5 w-5 mr-2" /> Order on WhatsApp
               </a>
             </Button>

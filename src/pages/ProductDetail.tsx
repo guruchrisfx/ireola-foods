@@ -62,7 +62,7 @@ const ProductDetail = () => {
 
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <Button size="lg" className="flex-1 bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
-              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+              <a href={getWhatsAppLink({ product, measurement: selectedMeasurement })} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="h-5 w-5 mr-2" /> Order on WhatsApp
               </a>
             </Button>

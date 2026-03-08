@@ -173,6 +173,33 @@ export const categories = [
   { id: "foodstuff", name: "Foodstuffs & Snacks", count: products.filter(p => p.category === "foodstuff").length },
 ];
 
-export function getWhatsAppLink() {
-  return "https://wa.me/message/PE6HU5UK4RRAB1";
+const PHONE = "2349162797173";
+
+export function getWhatsAppLink(context?: "general" | "enquiry" | "combo" | { product: Product; measurement?: number }) {
+  if (!context || context === "general") {
+    const msg = encodeURIComponent("Hi Ireola Foods! I'd like to place an order. Please share your available products and account details. Thank you!");
+    return `https://wa.me/${PHONE}?text=${msg}`;
+  }
+
+  if (context === "enquiry") {
+    const msg = encodeURIComponent("Hello Ireola Foods! I have an enquiry and would like some assistance. Could you help me out?");
+    return `https://wa.me/${PHONE}?text=${msg}`;
+  }
+
+  if (context === "combo") {
+    const msg = encodeURIComponent("Hi Ireola Foods! 🎉 I'd like to claim the Best-Seller Combo Deal — Golden Morn + Cornflakes + Milk starting at ₦28,000. Please send me your account details so I can make payment. Thank you!");
+    return `https://wa.me/${PHONE}?text=${msg}`;
+  }
+
+  // Product-specific
+  const { product, measurement } = context;
+  const m = product.measurements[measurement ?? 0];
+  const msg = encodeURIComponent(
+    `Hi Ireola Foods! I'm interested in purchasing:\n\n` +
+    `📦 Product: ${product.name}\n` +
+    `📏 Quantity: ${m.label}\n` +
+    `💰 Price: ${m.price}\n\n` +
+    `Please share your account details so I can make payment. Thank you!`
+  );
+  return `https://wa.me/${PHONE}?text=${msg}`;
 }

@@ -69,7 +69,7 @@ const Contact = () => {
 
             <div className="pt-4">
               <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground w-full sm:w-auto" asChild>
-                <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                <a href={getWhatsAppLink("enquiry")} target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="h-5 w-5 mr-2" /> Chat on WhatsApp
                 </a>
               </Button>
