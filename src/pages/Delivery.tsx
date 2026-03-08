@@ -36,7 +36,7 @@ const Delivery = () => (
       <div className="text-center mt-12">
         <p className="text-muted-foreground mb-4">Have questions about delivery? Reach out to us on WhatsApp.</p>
         <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
-          <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+          <a href={getWhatsAppLink("enquiry")} target="_blank" rel="noopener noreferrer">
             <WhatsAppIcon className="h-5 w-5 mr-2" /> Ask About Delivery
           </a>
         </Button>
