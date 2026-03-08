@@ -13,15 +13,16 @@ const Shop = () => {
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <div className="container py-8 md:py-12">
-      <h1 className="font-display text-3xl md:text-4xl font-bold mb-2">Shop Products</h1>
-      <p className="text-muted-foreground mb-8">Quality cereals, beverages & foodstuffs in measured quantities</p>
+    <div className="container py-6 md:py-12 px-4">
+      <h1 className="font-display text-2xl md:text-4xl font-bold mb-1.5 md:mb-2">Shop Products</h1>
+      <p className="text-muted-foreground text-sm md:text-base mb-5 md:mb-8">Quality cereals, beverages & foodstuffs in measured quantities</p>
 
       {/* Filters */}
-      <div className="flex flex-wrap gap-2 mb-8">
+      <div className="flex flex-wrap gap-1.5 md:gap-2 mb-6 md:mb-8">
         <Button
           variant={activeCategory === "all" ? "default" : "outline"}
           size="sm"
+          className="text-xs md:text-sm h-8 md:h-9"
           onClick={() => setSearchParams({})}
         >
           All ({products.length})
@@ -31,6 +32,7 @@ const Shop = () => {
             key={cat.id}
             variant={activeCategory === cat.id ? "default" : "outline"}
             size="sm"
+            className="text-xs md:text-sm h-8 md:h-9"
             onClick={() => setSearchParams({ category: cat.id })}
           >
             {cat.name} ({cat.count})
@@ -38,14 +40,14 @@ const Shop = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-6">
         {filtered.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
       {filtered.length === 0 && (
-        <p className="text-center text-muted-foreground py-12">No products found in this category.</p>
+        <p className="text-center text-muted-foreground py-12 text-sm">No products found in this category.</p>
       )}
     </div>
   );

@@ -6,7 +6,7 @@ const WhatsAppFloat = () => (
     href={getWhatsAppLink("enquiry")}
     target="_blank"
     rel="noopener noreferrer"
-    className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-whatsapp text-whatsapp-foreground px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
+    className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex items-center gap-2 bg-whatsapp text-whatsapp-foreground px-3 py-2.5 md:px-4 md:py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
     aria-label="Order on WhatsApp"
   >
     <WhatsAppIcon className="h-5 w-5" />
