@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { Product } from "@/lib/products";
 import { getWhatsAppLink } from "@/lib/products";
-import categoryCereals from "@/assets/category-cereals.jpg";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -12,7 +11,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       <Link to={`/product/${product.id}`} className="block">
         <div className="aspect-square bg-muted overflow-hidden">
           <img
-            src={categoryCereals}
+            src={product.image}
             alt={product.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />

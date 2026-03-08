@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ShoppingCart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
 import logo from "@/assets/ireola-logo.png";
+import { getWhatsAppLink } from "@/lib/products";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -21,10 +23,12 @@ const Header = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Ireola Foods" className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover" />
-          <span className="font-display text-lg md:text-xl font-bold text-foreground">Ireola Foods</span>
+          <div className="flex flex-col">
+            <span className="font-display text-lg md:text-xl font-bold text-primary">Ireola Foods</span>
+            <span className="text-[10px] text-muted-foreground leading-none hidden sm:block">No.1 Lagos Measured Cereals Vendor</span>
+          </div>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map(link => (
             <Link
@@ -38,9 +42,9 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button variant="default" size="sm" className="hidden md:inline-flex" asChild>
-            <a href="https://wa.me/2347037495760?text=Hello%20Ireola%20Foods!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer">
-              Order on WhatsApp
+          <Button size="sm" className="hidden md:inline-flex bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
+            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="h-4 w-4 mr-1" /> Order Now
             </a>
           </Button>
           <button className="md:hidden p-2" onClick={() => setOpen(!open)}>
@@ -49,7 +53,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile nav */}
       {open && (
         <nav className="md:hidden border-t bg-card px-4 pb-4 animate-fade-in">
           {navLinks.map(link => (
@@ -63,8 +66,8 @@ const Header = () => {
             </Link>
           ))}
           <Button className="w-full mt-3 bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
-            <a href="https://wa.me/2347037495760?text=Hello%20Ireola%20Foods!" target="_blank" rel="noopener noreferrer">
-              Order on WhatsApp
+            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="h-4 w-4 mr-2" /> Order on WhatsApp
             </a>
           </Button>
         </nav>
