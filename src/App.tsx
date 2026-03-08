@@ -37,6 +37,7 @@ const App = () => (
         </main>
         <Footer />
         <WhatsAppFloat />
+        <FirstVisitPopup />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
