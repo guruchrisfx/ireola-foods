@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, ShieldCheck, Truck, Star, ChevronRight, Package, CheckCircle } from "lucide-react";
+import { ShieldCheck, Truck, Star, ChevronRight, Package, CheckCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import ProductCard from "@/components/ProductCard";
 import { products, getWhatsAppLink } from "@/lib/products";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -18,7 +19,7 @@ const categoryImages = [
 const steps = [
   { icon: Package, title: "Browse Products", desc: "Explore our catalog of cereals, beverages & foodstuffs" },
   { icon: CheckCircle, title: "Choose Size", desc: "Pick paint bucket, half bag, or full bag measurement" },
-  { icon: MessageCircle, title: "Place Order", desc: "Add to cart or order directly via WhatsApp" },
+  { icon: () => <WhatsAppIcon className="h-6 w-6 text-primary" />, title: "Place Order", desc: "Add to cart or order directly via WhatsApp" },
   { icon: Truck, title: "Get Delivery", desc: "Receive your order anywhere in Nigeria" },
 ];
 
@@ -54,7 +55,7 @@ const Index = () => {
             </Button>
             <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
               <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-5 w-5 mr-2" /> Order on WhatsApp
+                <WhatsAppIcon className="h-5 w-5 mr-2" /> Order on WhatsApp
               </a>
             </Button>
           </div>

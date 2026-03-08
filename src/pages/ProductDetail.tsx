@@ -2,7 +2,8 @@ import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MessageCircle, ArrowLeft, ShieldCheck, Truck } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Truck } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { products, getWhatsAppLink } from "@/lib/products";
 
 const ProductDetail = () => {
@@ -62,7 +63,7 @@ const ProductDetail = () => {
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <Button size="lg" className="flex-1 bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
               <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-5 w-5 mr-2" /> Order on WhatsApp
+                <WhatsAppIcon className="h-5 w-5 mr-2" /> Order on WhatsApp
               </a>
             </Button>
           </div>

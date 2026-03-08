@@ -1,5 +1,7 @@
-import { Phone, MapPin, MessageCircle, Instagram, Clock } from "lucide-react";
+import { Phone, MapPin, Instagram, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { getWhatsAppLink } from "@/lib/products";
 
 const Contact = () => (
   <div>
@@ -18,7 +20,7 @@ const Contact = () => (
           { icon: Phone, title: "Phone / WhatsApp", lines: ["07037495760", "09162797173"] },
           { icon: MapPin, title: "Location", lines: ["Ojodu No.6 Berger", "Lagos, Nigeria"] },
           { icon: Clock, title: "Business Hours", lines: ["Mon–Sat: 8AM – 7PM", "Sunday: 10AM – 4PM"] },
-          { icon: Instagram, title: "Instagram", lines: ["@ireola_foods_cereals_vendor"] },
+          { icon: Instagram, title: "Instagram", lines: ["@ireolafoodscerealsvendor"] },
         ].map((item, i) => (
           <div key={i} className="flex gap-4 p-6 bg-card border rounded-lg">
             <item.icon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
@@ -38,8 +40,8 @@ const Contact = () => (
           The fastest way to order is through WhatsApp. Tap below to start a conversation.
         </p>
         <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
-          <a href="https://wa.me/2347037495760?text=Hello%20Ireola%20Foods!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="h-5 w-5 mr-2" /> Chat on WhatsApp
+          <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon className="h-5 w-5 mr-2" /> Chat on WhatsApp
           </a>
         </Button>
       </div>
